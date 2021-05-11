@@ -3,6 +3,8 @@ import dotenv from 'dotenv';
 import colors from 'colors';
 import connectDB from './config/db.js';
 import userRoutes from './routes/userRoutes.js';
+import petRoutes from './routes/petRoutes.js';
+import vetRoutes from './routes/vetRoutes.js';
 
 dotenv.config();
 
@@ -17,6 +19,8 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/users', userRoutes);
+app.use('/api/pet', petRoutes);
+app.use('/api/vet', vetRoutes);
 
 const PORT = 5000;
 
