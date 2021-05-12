@@ -1,9 +1,13 @@
+.body {
+  margin-top: 0px;
+}
 .header {
   margin: 0px;
   height: 100%;
+  padding: 0px;
 }
 .header-name {
   color: #ffffff;
   font-size: 48px;
-  text-decoration: none;
+  margin: 0px;
 }
