@@ -11,11 +11,14 @@
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "dependencies": {
+    "@expo-google-fonts/titan-one": "^0.1.0",
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "concurrently": "^6.0.1",
     "dotenv": "^8.2.0",
+    "expo": "^41.0.1",
+    "expo-font": "^9.1.0",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
     "jsonwebtoken": "^8.5.1",

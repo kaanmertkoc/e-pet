@@ -1,0 +1,9 @@
+.header {
+  margin: 0px;
+  height: 100%;
+}
+.header-name {
+  color: #ffffff;
+  font-size: 48px;
+  text-decoration: none;
+}
