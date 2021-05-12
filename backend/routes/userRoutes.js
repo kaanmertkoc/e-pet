@@ -12,7 +12,7 @@ import {
 
 router.route('/').post(registerUser).get(getUsers);
 router.post('/login', loginUser);
-router.route('/profile').get(getUserProfile).put(updateUserProfile);
-router.route('/:id').get(getUserById).delete(deleteUser);
+router.route('/profile').get(getUserProfile);
+router.route('/:id').get(getUserById).delete(deleteUser).put(updateUserProfile);
 
 export default router;
