@@ -4,18 +4,11 @@ import '../Styles/Header.css';
 
 const Header = () => {
   return (
-    <div>
-      <Navbar
-        className="header"
-        collapseOnSelect
-        expand="lg"
-        style={{ background: '#3C9FE7' }}
-      >
-        <Container fluid>
-          <Navbar.Brand href="/">
-            <h1 className="header-name">E-Pet</h1>
-          </Navbar.Brand>
-        </Container>
+    <div className="header">
+      <Navbar sticky="top" style={{ background: '#3C9FE7' }}>
+        <Navbar.Brand href="/" style={{ textDecoration: 'none' }}>
+          <h1 className="header-name">E-Pet</h1>
+        </Navbar.Brand>
       </Navbar>
     </div>
   );
