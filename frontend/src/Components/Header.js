@@ -1,15 +1,19 @@
 import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
 import '../Styles/Header.css';
 
 const Header = () => {
   return (
     <div className="header">
-      <Navbar sticky="top" style={{ background: '#3C9FE7' }}>
-        <Navbar.Brand href="/" style={{ textDecoration: 'none' }}>
-          <h1 className="header-name">E-Pet</h1>
-        </Navbar.Brand>
-      </Navbar>
+      <div className="brand-name">
+        <h1>E-Pet</h1>
+        <h6>We Love Animals</h6>
+      </div>
+      <form className="search-bar">
+        <input type="text" placeholder="Search..." name="search" />
+        <button type="submit">
+          <i className="fa fa-search"></i>
+        </button>
+      </form>
     </div>
   );
 };
