@@ -15,9 +15,11 @@ const LandingPageScreen = ({ history }) => {
   const { loading, error, userInfo } = userLogin;
 
   useEffect(() => {
+    /*
     if (userInfo) {
       history.push('/main');
     }
+    */
   }, [history, userInfo]);
 
   const submitHandler = e => {
@@ -47,10 +49,11 @@ const LandingPageScreen = ({ history }) => {
           <Button onClick={submitHandler} type="submit">
             <h5 className="button-text">Login</h5>
           </Button>
-          <p>Don't have an account? <Link to="/register">Register</Link></p>
+          <p>
+            Don't have an account? <Link to="/register">Register</Link>
+          </p>
         </div>
       </div>
-
     </div>
   );
 };
