@@ -1,0 +1,61 @@
+.admin-main-div {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(60, 159, 231, 0.24);
+}
+
+.admin-middle-div {
+  width: 70%;
+  height: 75%;
+  background-color: #f3faff;
+  border: 1px solid #f3faff;
+  display: flex;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 50px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.admin-middle-div h5 {
+  font-size: 36px;
+  color: #3c9fe7;
+  font-weight: normal;
+  margin: auto;
+}
+
+.admin-form-div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-form-div input {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid #3c9fe7;
+  float: left;
+  width: 100%;
+  background: #ffffff;
+  margin: 20px 0px;
+}
+
+.admin-form-div Button {
+  width: 75%;
+  height: 65px;
+  background: #ffffff;
+  border: 1px solid #3c9fe7;
+  margin: 30px;
+}
+
+.admin-form-div h6 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3c9fe7;
+  margin: 0px;
+}
