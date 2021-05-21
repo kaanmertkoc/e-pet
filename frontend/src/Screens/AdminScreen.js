@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Alert } from 'react-bootstrap';
 import '../Styles/AdminScreen.css';
 import { getUsers } from '../actions/userActions.js';
 import Loading from '../Components/Loading.js';
 import Message from '../Components/Message.js';
+import { register } from '../actions/vetAction.js';
 
 const AdminScreen = () => {
   const dispatch = useDispatch();
@@ -12,28 +13,38 @@ const AdminScreen = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [patients, setPatients] = useState('');
+  const [patients, setPatients] = useState([]);
+  const [show, setShow] = useState(false);
 
   const vetRegister = useSelector(state => state.vetRegister);
-  // const { loading, error, userInfo } = vetRegister;
+  const {
+    loading: vetLoading,
+    error: vetError,
+    userInfo: vetInfo,
+  } = vetRegister;
 
   const usersList = useSelector(state => state.usersList);
   const { loading, error, users } = usersList;
 
   useEffect(() => {
     dispatch(getUsers());
-  }, [dispatch]);
+    if (vetInfo) {
+      setShow(true);
+    }
+  }, [dispatch, vetInfo]);
 
   const submitHandler = e => {
     e.preventDefault();
-    //     dispatch(register(name, email, password, patients));
+    dispatch(register(name, email, password, patients));
   };
 
   return (
     <div className="admin-main-div">
       <div className="admin-middle-div">
+        <Alert show={show} variant="success">
+          <Alert.Heading> Register Success!</Alert.Heading>
+        </Alert>
         <h5>E-Pet Admin Page</h5>
-
         <div className="admin-form-div">
           <input
             type="name"
