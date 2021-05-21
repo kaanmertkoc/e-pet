@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { register } from '../actions/userActions';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Alert } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../Styles/RegisterPage.css';
 
@@ -14,9 +14,16 @@ const RegisterScreen = () => {
   const [address, setAddress] = useState('');
   const [phone, setPhone] = useState('');
   const [pets, setPets] = useState([]);
+  const [show, setShow] = useState(false);
 
   const userRegister = useSelector(state => state.userRegister);
   const { loading, error, userInfo } = userRegister;
+
+  useEffect(() => {
+    if (userInfo) {
+      setShow(true);
+    }
+  }, [userInfo]);
 
   const submitHandler = e => {
     e.preventDefault();
@@ -26,6 +33,9 @@ const RegisterScreen = () => {
   return (
     <div className="register-main-div">
       <div className="register-middle-div">
+        <Alert show={show} variant="success">
+          <Alert.Heading> Register Success!</Alert.Heading>
+        </Alert>
         <h5>Welcome To E-Pet!</h5>
         <div className="register-form-div">
           <input

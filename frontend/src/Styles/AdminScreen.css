@@ -11,6 +11,8 @@
   background-color: #f3faff;
   border: 1px solid #f3faff;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   top: 0;
   bottom: 0;
