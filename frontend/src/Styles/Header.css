@@ -11,7 +11,10 @@
   font-weight: lighter;
   color: #ffffff;
 }
-.brand-name h1 {
+.brand-name a {
+  font-size: 35px;
+  font-weight: bold;
+  text-decoration: none;
   margin: 20px 20px 0px 20px;
   color: #ffffff;
 }

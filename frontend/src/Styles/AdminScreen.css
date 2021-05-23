@@ -1,17 +1,18 @@
-.register-main-div {
-  position: absolute;
+.admin-main-div {
+  position: fixed;
   height: 100%;
   width: 100%;
   background: rgba(60, 159, 231, 0.24);
 }
 
-.register-middle-div {
-  width: 50%;
-  height: 90%;
+.admin-middle-div {
+  width: 70%;
+  height: 75%;
   background-color: #f3faff;
   border: 1px solid #f3faff;
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: relative;
   top: 0;
   bottom: 0;
@@ -22,44 +23,41 @@
   margin-top: 25px;
 }
 
-.register-middle-div h5 {
+.admin-middle-div h5 {
   font-size: 36px;
   color: #3c9fe7;
   font-weight: normal;
   margin: auto;
-  margin-top: 10px;
 }
 
-.register-form-div {
-  width: 75%;
-  height: 75%;
+.admin-form-div {
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto;
 }
 
-.register-form-div input {
+.admin-form-div input {
   padding: 10px;
   font-size: 17px;
   border: 1px solid #3c9fe7;
   float: left;
   width: 100%;
   background: #ffffff;
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 
-.register-form-div Button {
-  width: 60%;
-  height: 50px;
+.admin-form-div Button {
+  width: 75%;
+  height: 65px;
   background: #ffffff;
   border: 1px solid #3c9fe7;
-  margin: 11px;
+  margin: 30px;
 }
 
-.register-form-div h6 {
+.admin-form-div h6 {
   font-size: 24px;
-  color: #3c9fe7;
-  margin: 10px 0px;
   font-weight: bold;
+  color: #3c9fe7;
+  margin: 0px;
 }

@@ -9,6 +9,9 @@ import {
   GET_USER_PROFILE_SUCCESS,
   GET_USER_PROFILE_FAIL,
   GET_USER_PROFILE_RESET,
+  GET_USERS_REQUEST,
+  GET_USERS_SUCCESS,
+  GET_USERS_FAIL,
 } from '../constants/userConstants';
 
 export const userLoginReducer = (state = { pets: [] }, action) => {
@@ -76,6 +79,28 @@ export const userDetailsReducer = (state = { user: {} }, action) => {
     case GET_USER_PROFILE_RESET:
       return {
         user: {},
+      };
+    default:
+      return state;
+  }
+};
+
+export const getUsersReducer = (state = { users: [] }, action) => {
+  // eslint-disable-next-line default-case
+  switch (action.type) {
+    case GET_USERS_REQUEST:
+      return {
+        loading: true,
+      };
+    case GET_USERS_SUCCESS:
+      return {
+        loading: false,
+        users: action.payload,
+      };
+    case GET_USERS_FAIL:
+      return {
+        loading: false,
+        error: action.payload,
       };
     default:
       return state;

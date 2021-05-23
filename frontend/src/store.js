@@ -5,12 +5,16 @@ import {
   userLoginReducer,
   userRegisterReducer,
   userDetailsReducer,
+  getUsersReducer,
 } from './reducers/userReducers';
+import { vetRegisterReducer } from './reducers/vetReducers';
 
 const reducer = combineReducers({
   userLogin: userLoginReducer,
   userRegister: userRegisterReducer,
   userDetails: userDetailsReducer,
+  usersList: getUsersReducer,
+  vetRegister: vetRegisterReducer,
 });
 
 const middleware = [thunk];

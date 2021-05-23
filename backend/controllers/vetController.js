@@ -14,12 +14,10 @@ const addVet = asyncHandler(async (req, res) => {
   }
 
   const vet = await Vet.create({
-    image,
     name,
-    owner,
-    race,
-    age,
-    sex,
+    email,
+    password,
+    patients,
   });
 
   if (vet) {
