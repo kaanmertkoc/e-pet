@@ -13,6 +13,7 @@ function App() {
         <Route path="/" exact component={LandingPageScreen} />
         <Route path="/register" exact component={RegisterScreen} />
         <Route path="/admin" exact component={AdminScreen} />
+        <Route path="/owner" exact component={OwnerMainPageScreen} />
       </Switch>
     </Router>
   );
