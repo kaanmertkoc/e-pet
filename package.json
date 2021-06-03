@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@expo-google-fonts/titan-one": "^0.1.0",
+    "@fontsource/trirong": "^4.4.2",
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",

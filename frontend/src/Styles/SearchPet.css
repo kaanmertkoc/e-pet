@@ -1,0 +1,53 @@
+.search-pet-container {
+  position: absolute;
+  left: 15%;
+  top: 25%;
+  background-color: #f3faff;
+  width: 70%;
+  height: 60%;
+}
+.pet-outer-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 100px 0px 0px 20px;
+  flex-direction: row;
+}
+.pet-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px 0px 20px;
+}
+.pet-info body {
+  font-size: 30px;
+  margin: 10px;
+}
+.pet-details {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px 0px 20px;
+}
+.pet-details body {
+  font-size: 30px;
+  margin: 10px;
+}
+.vaccine-row {
+  display: flex;
+  flex-direction: row;
+}
+.vaccine {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.vaccine img {
+  margin: 10px 0px 0px 50px;
+}
+.motto {
+  position: absolute;
+  left: 40%;
+  bottom: 10%;
+  font-size: 18px;
+  font-style: italic;
+  font-family: 'Trirong';
+}
