@@ -3,6 +3,7 @@ import LandingPageScreen from '../src/Screens/LandingPageScreen';
 import OwnerMainPageScreen from '../src/Screens/OwnerMainPageScreen';
 import RegisterScreen from '../src/Screens/RegisterScreen';
 import AdminScreen from '../src/Screens/AdminScreen';
+import VetMainPageScreen from '../src/Screens/VetMainPageScreen';
 import Header from './Components/Header';
 import OwnerAppointmentPage from './Screens/OwnerAppointmentsPage';
 import VetInformation from './Screens/VetInformation';
@@ -18,6 +19,7 @@ function App() {
         <Route path="/owner" exact component={OwnerMainPageScreen} />
         <Route path="/ownerAppointment" exact component={OwnerAppointmentPage} />
         <Route path="/vetInformation" exact component={VetInformation} />
+        <Route path="/vet-main-page" exact component={VetMainPageScreen} />
       </Switch>
     </Router>
   );
