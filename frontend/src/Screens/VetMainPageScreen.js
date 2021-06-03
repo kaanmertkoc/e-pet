@@ -9,7 +9,10 @@ import cino from '../images/cino.jpeg';
 const VetMainPageScreen = () => {
     return (
         <div className="vet-main-div">
-
+            <div className="header-patient">
+                <h1>Patients</h1>
+                <Button className="edit-btn"><h6>Add Patient</h6></Button>
+            </div>
             <div className="column">
                 <img className="pet-img" src={cino} alt="cino-dog" />
                 <div className="pet-short-info-div">

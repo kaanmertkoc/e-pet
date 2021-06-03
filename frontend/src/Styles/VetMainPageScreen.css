@@ -5,10 +5,19 @@
   display: table-column;
 }
 
-.vet-div-main-table {
-  width: 100%;
+* {
+  box-sizing: border-box;
+}
+
+.header-patient {
+  position: relative;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
   margin: auto;
-  display: table-row;
+  margin-bottom: 90px;
 }
 
 .pet-short-info-div {
@@ -17,10 +26,6 @@
   flex-direction: column;
   width: 100%;
   align-items: center;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 .column {
@@ -68,5 +73,10 @@
   font-size: 24px;
   color: #fff;
   margin: 10px 0px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 36px;
   font-weight: bold;
 }
