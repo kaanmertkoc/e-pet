@@ -5,6 +5,7 @@ import RegisterScreen from '../src/Screens/RegisterScreen';
 import AdminScreen from '../src/Screens/AdminScreen';
 import Header from './Components/Header';
 import OwnerAppointmentPage from './Screens/OwnerAppointmentsPage';
+import VetInformation from './Screens/VetInformation';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/admin" exact component={AdminScreen} />
         <Route path="/owner" exact component={OwnerMainPageScreen} />
         <Route path="/ownerAppointment" exact component={OwnerAppointmentPage} />
+        <Route path="/vetInformation" exact component={VetInformation} />
       </Switch>
     </Router>
   );
