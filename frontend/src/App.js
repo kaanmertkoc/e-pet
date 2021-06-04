@@ -8,9 +8,15 @@ import Header from './Components/Header';
 import OwnerAppointmentPage from './Screens/OwnerAppointmentsPage';
 import VetInformation from './Screens/VetInformation';
 import SearchPetScreen from './Screens/SearchPetScreen';
+<<<<<<< HEAD
 import OwnerInformation from './Screens/OwnerInformation';
 import OwnerPetsPage from './Screens/OwnerPetsPage';
 import VetAppointmentPage from './Screens/VetAppointmentsPage';
+=======
+import AddPetScreen from './Screens/AddPetScreen';
+import PetInfoScreen from './Screens/PetInfoScreen';
+
+>>>>>>> kaan
 function App() {
   return (
     <Router>
@@ -24,10 +30,15 @@ function App() {
         <Route path="/vetInformation" exact component={VetInformation} />
         <Route path="/vet-main-page" exact component={VetMainPageScreen} />
         <Route path="/search/:id" exact component={SearchPetScreen} />
+<<<<<<< HEAD
         <Route path="/ownerInformation" exact component={OwnerInformation} />
         <Route path="/ownerPets" exact component={OwnerPetsPage} />
         <Route path="/vetAppointment" exact component={VetAppointmentPage} />
 
+=======
+        <Route path="/addPet" exact component={AddPetScreen} />
+        <Route path="/petInfo" exact component={PetInfoScreen} />
+>>>>>>> kaan
       </Switch>
     </Router>
   );
