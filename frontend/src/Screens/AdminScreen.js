@@ -85,7 +85,7 @@ const AdminScreen = () => {
           )}
 
           <Button onClick={submitHandler} type="submit">
-            <h6>ADD VETERINARIAN</h6>
+            ADD VETERINARIAN
           </Button>
         </div>
       </div>

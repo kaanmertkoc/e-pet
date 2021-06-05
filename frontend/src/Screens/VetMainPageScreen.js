@@ -11,14 +11,14 @@ const VetMainPageScreen = () => {
         <div className="vet-main-div">
             <div className="header-patient">
                 <h1>Patients</h1>
-                <Button className="edit-btn"><h6>Add Patient</h6></Button>
+                <Button className="edit-btn">Add Patient</Button>
             </div>
             <div className="column">
                 <img className="pet-img" src={cino} alt="cino-dog" />
                 <div className="pet-short-info-div">
                     <p className="pet-info-p">Cino</p>
                     <p className="pet-info-p">123456789</p>
-                    <Button className="edit-btn"><h6>Edit</h6></Button>
+                    <Button className="edit-btn">Edit</Button>
                 </div>
             </div>
             <div className="column">
@@ -26,7 +26,7 @@ const VetMainPageScreen = () => {
                 <div className="pet-short-info-div">
                     <p className="pet-info-p">Dino</p>
                     <p className="pet-info-p">12345678910</p>
-                    <Button className="edit-btn"><h6>Edit</h6></Button>
+                    <Button className="edit-btn">Edit</Button>
                 </div>
             </div>
             <div className="column">
@@ -34,7 +34,7 @@ const VetMainPageScreen = () => {
                 <div className="pet-short-info-div">
                     <p className="pet-info-p">Fino</p>
                     <p className="pet-info-p">12345678911</p>
-                    <Button className="edit-btn"><h6>Edit</h6></Button>
+                    <Button className="edit-btn">Edit</Button>
                 </div>
             </div>
             <div className="column">
@@ -42,9 +42,10 @@ const VetMainPageScreen = () => {
                 <div className="pet-short-info-div">
                     <p className="pet-info-p">Fino</p>
                     <p className="pet-info-p">12345678911</p>
-                    <Button className="edit-btn"><h6>Edit</h6></Button>
+                    <Button className="edit-btn">Edit</Button>
                 </div>
             </div>
+
 
 
         </div>

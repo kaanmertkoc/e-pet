@@ -74,7 +74,7 @@ const RegisterScreen = () => {
             name="address"
           />
           <Button onClick={submitHandler} type="submit">
-            <h6>Register</h6>
+            Register
           </Button>
           <p>
             Do you have an account? <Link to="/">Login</Link>
