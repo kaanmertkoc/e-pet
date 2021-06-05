@@ -8,6 +8,7 @@ import {
   getUsersReducer,
 } from './reducers/userReducers';
 import { vetRegisterReducer } from './reducers/vetReducers';
+import { addPetReducer } from './reducers/petReducers';
 
 const reducer = combineReducers({
   userLogin: userLoginReducer,
@@ -15,6 +16,7 @@ const reducer = combineReducers({
   userDetails: userDetailsReducer,
   usersList: getUsersReducer,
   vetRegister: vetRegisterReducer,
+  addPet: addPetReducer,
 });
 
 const middleware = [thunk];

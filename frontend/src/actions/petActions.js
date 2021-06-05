@@ -13,12 +13,8 @@ export const addPet = pet => async dispatch => {
     dispatch({
       type: ADD_PET_REQUEST,
     });
-    const config = {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    };
-    const { data } = await axios.post('/api/pet/', config);
+
+    const { data } = await axios.post('/api/pet/', pet);
     dispatch({
       type: ADD_PET_SUCCESS,
       payload: data,

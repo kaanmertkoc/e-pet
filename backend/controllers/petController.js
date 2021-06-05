@@ -5,7 +5,8 @@ import Pet from '../models/petModel.js';
 // @route POST /api/pet/
 // @access VET
 const addPet = asyncHandler(async (req, res) => {
-  const { image, name, owner, race, age, sex, vaccines } = req.body;
+  const { image, name, owner, race, age, sex, dateOfBirth, vaccines } =
+    req.body;
   const petExists = await Pet.findOne({ owner });
 
   if (petExists) {
@@ -21,6 +22,7 @@ const addPet = asyncHandler(async (req, res) => {
     age,
     sex,
     vaccines,
+    dateOfBirth,
   });
 
   if (pet) {
@@ -32,6 +34,7 @@ const addPet = asyncHandler(async (req, res) => {
       race: pet.race,
       age: pet.age,
       sex: pet.sex,
+      dateOfBirth: pet.dateOfBirth,
       vaccines: pet.vaccines,
     });
   } else {

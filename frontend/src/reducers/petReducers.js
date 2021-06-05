@@ -13,7 +13,7 @@ export const addPetReducer = (state = { vaccines: {} }, action) => {
       };
     case ADD_PET_SUCCESS:
       return {
-        loading: true,
+        loading: false,
         petInfo: action.payload,
       };
     case ADD_PET_FAIL:

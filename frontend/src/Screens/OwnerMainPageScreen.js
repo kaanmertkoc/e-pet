@@ -13,12 +13,6 @@ const OwnerMainPageScreen = ({ history }) => {
   const userLogin = useSelector(state => state.userLogin);
   const { loading, error, userInfo } = userLogin;
 
-  useEffect(() => {
-    if (userInfo) {
-      history.push('/main');
-    }
-  }, [history, userInfo]);
-
   const submitHandler = e => {
     e.preventDefault();
     dispatch(login(email, password));
@@ -29,7 +23,7 @@ const OwnerMainPageScreen = ({ history }) => {
       <div className="appointment-form">
         <div className="appointment-container">
           <h6>Appointment</h6>
-          <form className='appointment-form-style'>
+          <form className="appointment-form-style">
             <Form.Group as={Form.col} controlId="formGridState">
               <Form.Control as="select" defaultValue="Choose...">
                 <option>Pick a pet</option>
@@ -39,7 +33,7 @@ const OwnerMainPageScreen = ({ history }) => {
               </Form.Control>
             </Form.Group>
           </form>
-          <form className='appointment-form-style'>
+          <form className="appointment-form-style">
             <Form.Group as={Form.col} controlId="formGridState">
               <Form.Control as="select" defaultValue="Choose...">
                 <option>Pick Appointment Type</option>
@@ -49,7 +43,7 @@ const OwnerMainPageScreen = ({ history }) => {
               </Form.Control>
             </Form.Group>
           </form>
-          <form className='appointment-form-style'>
+          <form className="appointment-form-style">
             <Form.Group as={Form.col} controlId="formGridState">
               <Form.Control as="select" defaultValue="Choose...">
                 <option>Pick Veterinarian</option>
@@ -59,7 +53,7 @@ const OwnerMainPageScreen = ({ history }) => {
               </Form.Control>
             </Form.Group>
           </form>
-          <form className='appointment-form-style'>
+          <form className="appointment-form-style">
             <Form.Group as={Form.col} controlId="formGridState">
               <Form.Control as="select" defaultValue="Choose...">
                 <option>Pick Date</option>
@@ -69,7 +63,7 @@ const OwnerMainPageScreen = ({ history }) => {
               </Form.Control>
             </Form.Group>
           </form>
-          <form className='appointment-form-style'>
+          <form className="appointment-form-style">
             <Form.Group as={Form.col} controlId="formGridState">
               <Form.Control as="select" defaultValue="Choose...">
                 <option>Pick Time</option>
@@ -84,10 +78,10 @@ const OwnerMainPageScreen = ({ history }) => {
           </Button>
         </div>
       </div>
-      <Button className='owner-page-btn' onClick={submitHandler} type="submit">
+      <Button className="owner-page-btn" onClick={submitHandler} type="submit">
         <h5 className="button-text">My Pets</h5>
       </Button>
-      <Button className='owner-page-btn' onClick={submitHandler} type="submit">
+      <Button className="owner-page-btn" onClick={submitHandler} type="submit">
         <h5 className="button-text">My Appointments</h5>
       </Button>
     </div>

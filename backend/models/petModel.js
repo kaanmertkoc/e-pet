@@ -27,6 +27,10 @@ const petSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    birthDate: {
+      type: String,
+      required: false,
+    },
     vaccines: {
       type: [mongoose.Schema.Types.String],
       required: true,

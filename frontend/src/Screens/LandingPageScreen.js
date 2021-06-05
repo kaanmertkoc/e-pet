@@ -15,11 +15,9 @@ const LandingPageScreen = ({ history }) => {
   const { loading, error, userInfo } = userLogin;
 
   useEffect(() => {
-    /*
     if (userInfo) {
-      history.push('/main');
+      history.push('/addPet');
     }
-    */
   }, [history, userInfo]);
 
   const submitHandler = e => {
