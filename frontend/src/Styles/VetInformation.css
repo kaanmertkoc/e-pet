@@ -1,0 +1,105 @@
+.vet-main-div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(60, 159, 231, 0.24);
+  }
+  .vet-main-div h5{
+    font-size: 36px;
+    margin:-40px 0px 0px 1100px;
+  }
+
+  .vet-main-div h6{
+    font-size: 36px;
+    margin: 60px 0px 0px 300px;
+  }
+  .vet-middle-div {
+    width: 30%;
+    height: 50%;
+    background-color: #f3faff;
+    border: 1px solid #f3faff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 60px 0px 0px 20px;  
+  }
+  .vet-column {
+    float: left;
+    width: 33.33%;
+    padding-left: 50px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+  .vet-pet-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .vet-right-div {
+    width: 50%;
+    display: flex;
+    margin: -400px 0px 0px 800px; 
+     
+  }
+  
+  .vet-middle-div h5 {
+    font-size: 36px;
+    color: #3c9fe7;
+    font-weight: normal;
+    margin: auto;
+    margin-top: 10px;
+  }
+  .vet-img {
+    width: 148px;
+    height: 242px;
+    margin: auto;
+    align-items: center;
+  }
+  
+  .vet-info-p {
+    margin: auto;
+    width: 45%;
+    padding: 5px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .vet-form-div {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+  
+  .vet-form-div input {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #3c9fe7;
+    float: left;
+    width: 100%;
+    background: #ffffff;
+    margin: 10px 0px;
+  }
+  
+  .vet-form-div Button {
+    width: 60%;
+    height: 50px;
+    background: #ffffff;
+    border: 1px solid #3c9fe7;
+    margin: 11px;
+  }
+  
+  .vet-form-div h6 {
+    font-size: 24px;
+    color: #3c9fe7;
+    margin: 10px 0px;
+    font-weight: bold;
+  }
