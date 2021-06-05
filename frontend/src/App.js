@@ -13,6 +13,10 @@ import OwnerPetsPage from './Screens/OwnerPetsPage';
 import VetAppointmentPage from './Screens/VetAppointmentsPage';
 import AddPetScreen from './Screens/AddPetScreen';
 import PetInfoScreen from './Screens/PetInfoScreen';
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 function App() {
   return (
     <Router>
@@ -28,8 +32,13 @@ function App() {
         <Route path="/search/:id" exact component={SearchPetScreen} />
         <Route path="/ownerInformation" exact component={OwnerInformation} />
         <Route path="/ownerPets" exact component={OwnerPetsPage} />
+<<<<<<< HEAD
         <Route path="/VetAppointment" exact component={VetAppointmentPage} />
+=======
+        <Route path="/vetAppointment" exact component={VetAppointmentPage} />
+>>>>>>> master
         <Route path="/addPet" exact component={AddPetScreen} />
+        <Route path="/vet-main-page" exact component={VetMainPageScreen} />
         <Route path="/petInfo" exact component={PetInfoScreen} />
       </Switch>
     </Router>
