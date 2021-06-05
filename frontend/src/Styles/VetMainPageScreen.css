@@ -1,0 +1,82 @@
+.vet-main-div {
+  position: absolute;
+  width: 100%;
+  background: rgba(60, 159, 231, 0.24);
+  display: table-column;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header-patient {
+  position: relative;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  margin: auto;
+  margin-bottom: 90px;
+}
+
+.pet-short-info-div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding-left: 50px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.pet-img {
+  width: 148px;
+  height: 242px;
+  margin: auto;
+  align-items: center;
+}
+
+.pet-info-p {
+  margin: auto;
+  width: 45%;
+  padding: 5px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.edit-btn {
+  width: 60%;
+  height: 50px;
+  background: #3c9fe7;
+  border: 1px solid #fff;
+  margin: 11px;
+}
+
+.edit-btn h6 {
+  font-size: 24px;
+  color: #fff;
+  margin: 10px 0px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
