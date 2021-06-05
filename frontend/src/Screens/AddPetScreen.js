@@ -99,14 +99,10 @@ const AddPetScreen = () => {
                   onChange={e => setColour(e.target.value)}
                 ></Form.Control>
               </Form.Group>
-<<<<<<< HEAD
               <div
                 style={{ margin: '20px 0px 0px 0px' }}
                 className="vaccine-row"
               >
-=======
-              <div className="vaccine-row">
->>>>>>> 29bd2ffddd7391681497b857e9188c99de7423af
                 <Form.Check
                   inline
                   label="Vaccine1"
