@@ -25,14 +25,12 @@ function App() {
         <Route path="/owner" exact component={OwnerMainPageScreen} />
         <Route path="/ownerAppointment" exact component={OwnerAppointmentPage} />
         <Route path="/vetInformation" exact component={VetInformation} />
-        <Route path="/vet-main-page" exact component={VetMainPageScreen} />
         <Route path="/search/:id" exact component={SearchPetScreen} />
         <Route path="/ownerInformation" exact component={OwnerInformation} />
         <Route path="/ownerPets" exact component={OwnerPetsPage} />
         <Route path="/vetAppointment" exact component={VetAppointmentPage} />
         <Route path="/addPet" exact component={AddPetScreen} />
         <Route path="/vet-main-page" exact component={VetMainPageScreen} />
-        <Route path="/petInfo" exact component={PetInfoScreen} />
       </Switch>
     </Router>
   );

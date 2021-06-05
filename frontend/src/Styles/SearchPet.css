@@ -19,7 +19,7 @@
   margin: 0px 0px 0px 20px;
 }
 .pet-info h6 {
-  font-size: 20px;
+  font-size: 30px;
   margin: 10px;
 }
 .pet-details {
@@ -28,7 +28,7 @@
   margin: 0px 0px 0px 20px;
 }
 .pet-details h6 {
-  font-size: 20px;
+  font-size: 30px;
   margin: 10px;
 }
 .vaccine-row {
@@ -42,6 +42,9 @@
 }
 .vaccine img {
   margin: 10px 0px 0px 50px;
+}
+.vaccine h6 {
+  margin: 0px 0px 0px 10px;
 }
 .motto {
   position: absolute;

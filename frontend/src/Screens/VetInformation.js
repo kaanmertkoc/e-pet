@@ -3,19 +3,30 @@ import '../Styles/VetInformation.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form, Button, InputGroup } from 'react-bootstrap';
 import { login } from '../actions/userActions';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import cino from '../images/cino.jpeg';
 const VetInformation = ({ history }) => {
   return (
     <div className="vet-main-div">
+<<<<<<< HEAD
       <h6> Vet Info</h6>
       <h5>Patients</h5>
 
       <div className="vet-middle-div"></div>
 
       <div className="vet-right-div">
+=======
+
+      <h6> Vet Info</h6>
+      <h5>Patients</h5>
+
+      <div className="vet-middle-div">
+
+      </div>
+
+      <div className="vet-right-div">
+
         <div className="vet-column">
           <img className="vet-img" src={cino} alt="cino-dog" />
           <div className="vet-pet-info">
@@ -23,6 +34,16 @@ const VetInformation = ({ history }) => {
             <p className="vet-info-p">123456789</p>
           </div>
         </div>
+
+>>>>>>> 29bd2ffddd7391681497b857e9188c99de7423af
+        <div className="vet-column">
+          <img className="vet-img" src={cino} alt="cino-dog" />
+          <div className="vet-pet-info">
+            <p className="vet-info-p">Cino</p>
+            <p className="vet-info-p">123456789</p>
+          </div>
+        </div>
+<<<<<<< HEAD
 
         <div className="vet-column">
           <img className="vet-img" src={cino} alt="cino-dog" />
@@ -32,6 +53,11 @@ const VetInformation = ({ history }) => {
           </div>
         </div>
       </div>
+=======
+
+      </div>
+
+>>>>>>> 29bd2ffddd7391681497b857e9188c99de7423af
     </div>
   );
 };

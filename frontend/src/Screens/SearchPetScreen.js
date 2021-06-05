@@ -11,22 +11,22 @@ const SearchPetScreen = () => {
         <div className="pet-outer-container">
           <img src="/image1.png" width="250px" height="368px" alt="pet" />
           <div className="pet-info">
-            <body>Name: </body>
-            <body>Date of Birth: </body>
-            <body>Breed: </body>
-            <body>Sex: </body>
-            <body>Colour: </body>
-            <body>Vaccinations: </body>
+            <h6>Name: </h6>
+            <h6>Date of Birth: </h6>
+            <h6>Breed: </h6>
+            <h6>Sex: </h6>
+            <h6>Colour: </h6>
+            <h6>Vaccinations: </h6>
           </div>
           <div className="pet-details">
-            <body>Cino </body>
-            <body>28.10.2010</body>
-            <body>Golden Retreiver</body>
-            <body>Male</body>
-            <body>Light Blonde</body>
+            <h6>Cino </h6>
+            <h6>28.10.2010</h6>
+            <h6>Golden Retreiver</h6>
+            <h6>Male</h6>
+            <h6>Light Blonde</h6>
             <div className="vaccine-row">
               <div className="vaccine">
-                <body>Vaccine 1</body>
+                <h6>Vaccine 1</h6>
                 <img
                   src="/check-circle-solid.svg"
                   alt="something"
@@ -35,7 +35,7 @@ const SearchPetScreen = () => {
                 />
               </div>
               <div className="vaccine">
-                <body>Vaccine 2</body>
+                <h6>Vaccine 2</h6>
                 <img
                   src="/check-circle-solid.svg"
                   alt="something"
@@ -44,7 +44,7 @@ const SearchPetScreen = () => {
                 />
               </div>
               <div className="vaccine">
-                <body>Vaccine 3</body>
+                <h6>Vaccine 3</h6>
                 <img
                   src="/check-circle-solid.svg"
                   alt="something"
@@ -53,7 +53,7 @@ const SearchPetScreen = () => {
                 />
               </div>
               <div className="vaccine">
-                <body>Vaccine 4</body>
+                <h6>Vaccine 4</h6>
                 <img
                   src="/check-circle-solid.svg"
                   alt="something"

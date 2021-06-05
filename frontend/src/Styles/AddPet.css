@@ -57,6 +57,7 @@
 .vaccine-row {
   display: flex;
   flex-direction: row;
+  margin: 20px 0px 0px 0px;
 }
 .vaccine {
   display: flex;
