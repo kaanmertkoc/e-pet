@@ -6,6 +6,7 @@ import VetMainPageScreen from '../src/Screens/VetMainPageScreen';
 import Header from './Components/Header';
 import SearchPetScreen from './Screens/SearchPetScreen';
 import AddPetScreen from './Screens/AddPetScreen';
+import PetInfoScreen from './Screens/PetInfoScreen';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/search/:id" exact component={SearchPetScreen} />
         <Route path="/addPet" exact component={AddPetScreen} />
         <Route path="/vet-main-page" exact component={VetMainPageScreen} />
+        <Route path="/petInfo" exact component={PetInfoScreen} />
       </Switch>
     </Router>
   );
