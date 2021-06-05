@@ -67,9 +67,12 @@
   background: #3c9fe7;
   border: 1px solid #fff;
   margin: 11px;
-  text-align: center;
+}
+
+.edit-btn h6 {
   font-size: 24px;
   color: #fff;
+  margin: 10px 0px;
   font-weight: bold;
 }
 
