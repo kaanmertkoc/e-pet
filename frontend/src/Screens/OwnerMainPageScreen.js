@@ -2,21 +2,53 @@ import React, { useState, useEffect } from 'react';
 import '../Styles/OwnerMainPageScreen.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form, Button, InputGroup } from 'react-bootstrap';
-import { login } from '../actions/userActions';
+import { getVets } from '../actions/vetAction';
+import { getPets } from '../actions/petActions';
+import { addAppointment } from '../actions/appointmentAction';
+import Loader from '../Components/Loading';
+import Message from '../Components/Message';
 
 const OwnerMainPageScreen = ({ history }) => {
   const dispatch = useDispatch();
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [pet, setPet] = useState('');
+  const [appointmentType, setAppointmentType] = useState('');
+  const [vet, setVet] = useState('');
+  const [date, setDate] = useState(Date.now);
 
-  const userLogin = useSelector(state => state.userLogin);
-  const { loading, error, userInfo } = userLogin;
+  const vetList = useSelector(state => state.vetList);
+  const { loading, error, vets } = vetList;
+
+  const petList = useSelector(state => state.getPet);
+  const { loading: loadingPets, error: errorPets, pets } = petList;
 
   const submitHandler = e => {
     e.preventDefault();
-    dispatch(login(email, password));
+    var vetId = '';
+    var petId = '';
+
+    for (var i = 0; i < vets.length; i++) {
+      if (vet === vets[i].name) {
+        vetId = vets[i]._id;
+      }
+    }
+    for (var i = 0; i < pets.length; i++) {
+      if (pet === pets[i].name) {
+        petId = pets[i]._id;
+      }
+    }
+    const appointment = {
+      pet: petId,
+      appType: 'appointment1',
+      vet: vetId,
+      date,
+    };
+    dispatch(addAppointment(appointment));
   };
+  useEffect(() => {
+    dispatch(getPets());
+    dispatch(getVets());
+  }, [dispatch]);
 
   return (
     <div className="owner-page-container">
@@ -24,64 +56,67 @@ const OwnerMainPageScreen = ({ history }) => {
         <div className="appointment-container">
           <h6>Appointment</h6>
           <form className="appointment-form-style">
-            <Form.Group as={Form.col} controlId="formGridState">
-              <Form.Control as="select" defaultValue="Choose...">
-                <option>Pick a pet</option>
-                <option>Dino1</option>
-                <option>Dino2</option>
-                <option>Dino3</option>
-              </Form.Control>
-            </Form.Group>
+            {loadingPets ? (
+              <Loader />
+            ) : errorPets ? (
+              <Message variant="danger">{error}</Message>
+            ) : (
+              <Form.Group as={Form.col} controlId="formGridState">
+                <Form.Control
+                  as="select"
+                  value={pet}
+                  onChange={e => setPet(e.target.value)}
+                >
+                  {pets.map(pet => (
+                    <option>{pet.name}</option>
+                  ))}
+                </Form.Control>
+              </Form.Group>
+            )}
           </form>
           <form className="appointment-form-style">
             <Form.Group as={Form.col} controlId="formGridState">
               <Form.Control as="select" defaultValue="Choose...">
                 <option>Pick Appointment Type</option>
-                <option>Dino1</option>
-                <option>Dino2</option>
-                <option>Dino3</option>
+                <option>Appointment1</option>
+                <option>Appointment2</option>
+                <option>Appointment3</option>
               </Form.Control>
             </Form.Group>
           </form>
           <form className="appointment-form-style">
-            <Form.Group as={Form.col} controlId="formGridState">
-              <Form.Control as="select" defaultValue="Choose...">
-                <option>Pick Veterinarian</option>
-                <option>Dino1</option>
-                <option>Dino2</option>
-                <option>Dino3</option>
-              </Form.Control>
-            </Form.Group>
+            {loading ? (
+              <Loader />
+            ) : error ? (
+              <Message variant="danger">{error}</Message>
+            ) : (
+              <Form.Group as={Form.col} controlId="formGridState">
+                <Form.Control
+                  as="select"
+                  value={vet}
+                  onChange={e => setVet(e.target.value)}
+                >
+                  {vets.map(vet => (
+                    <option>{vet.name}</option>
+                  ))}
+                </Form.Control>
+              </Form.Group>
+            )}
           </form>
           <form className="appointment-form-style">
             <Form.Group as={Form.col} controlId="formGridState">
-              <Form.Control as="select" defaultValue="Choose...">
-                <option>Pick Date</option>
-                <option>Dino1</option>
-                <option>Dino2</option>
-                <option>Dino3</option>
-              </Form.Control>
+              <Form.Control type="date" />
             </Form.Group>
           </form>
-          <form className="appointment-form-style">
-            <Form.Group as={Form.col} controlId="formGridState">
-              <Form.Control as="select" defaultValue="Choose...">
-                <option>Pick Time</option>
-                <option>Dino1</option>
-                <option>Dino2</option>
-                <option>Dino3</option>
-              </Form.Control>
-            </Form.Group>
-          </form>
-          <Button onClick={submitHandler} type="submit">
+          <Button type="submit" onClick={submitHandler}>
             <h5 className="button-text">Add Appointment</h5>
           </Button>
         </div>
       </div>
-      <Button className="owner-page-btn" onClick={submitHandler} type="submit">
+      <Button className="owner-page-btn" type="submit">
         <h5 className="button-text">My Pets</h5>
       </Button>
-      <Button className="owner-page-btn" onClick={submitHandler} type="submit">
+      <Button className="owner-page-btn" type="submit">
         <h5 className="button-text">My Appointments</h5>
       </Button>
     </div>

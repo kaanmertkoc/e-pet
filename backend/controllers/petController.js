@@ -51,6 +51,11 @@ const getPetById = asyncHandler(async (req, res) => {
   res.json(pet);
 });
 
+const getPets = asyncHandler(async (req, res) => {
+  const pets = await Pet.find({});
+  res.json(pets);
+});
+
 const searchPet = asyncHandler(async (req, res) => {
   const keyword = req.query.keyword
     ? {
@@ -103,4 +108,4 @@ const updatePet = asyncHandler(async (req, res) => {
   }
 });
 
-export { addPet, getPetById, deletePet, updatePet, searchPet };
+export { addPet, getPetById, deletePet, updatePet, searchPet, getPets };

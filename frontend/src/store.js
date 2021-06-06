@@ -7,12 +7,13 @@ import {
   userDetailsReducer,
   getUsersReducer,
 } from './reducers/userReducers';
-import { vetRegisterReducer } from './reducers/vetReducers';
+import { vetRegisterReducer, getVetsReducer } from './reducers/vetReducers';
 import {
   addPetReducer,
   getPetReducer,
   getPetDetailReducer,
 } from './reducers/petReducers';
+import { addAppointmentReducer } from './reducers/appointmentReducer';
 
 const reducer = combineReducers({
   userLogin: userLoginReducer,
@@ -23,6 +24,8 @@ const reducer = combineReducers({
   addPet: addPetReducer,
   getPet: getPetReducer,
   getPetDetail: getPetDetailReducer,
+  vetList: getVetsReducer,
+  addAppointment: addAppointmentReducer,
 });
 
 const middleware = [thunk];

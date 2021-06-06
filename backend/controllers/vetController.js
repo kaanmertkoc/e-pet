@@ -33,6 +33,14 @@ const addVet = asyncHandler(async (req, res) => {
   }
 });
 
+// @desc Get vets
+// @route GET /api/vet
+// @access PUBLIC
+const getVets = asyncHandler(async (req, res) => {
+  const vets = await Vet.find({});
+  res.json(vets);
+});
+
 // @desc    Get vet by ID
 // @route   GET /api/vet/:id
 // @access  user
@@ -83,4 +91,4 @@ const updateVet = asyncHandler(async (req, res) => {
   }
 });
 
-export { addVet, getVetById, deleteVet, updateVet };
+export { addVet, getVetById, deleteVet, updateVet, getVets };

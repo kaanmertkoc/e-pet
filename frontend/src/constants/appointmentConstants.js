@@ -1,0 +1,3 @@
+export const ADD_APPT_REQUEST = 'ADD_APPT_REQUEST';
+export const ADD_APPT_SUCCESS = 'ADD_APPT_SUCCESS';
+export const ADD_APPT_FAIL = 'ADD_APPT_FAIL';
