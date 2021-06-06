@@ -7,12 +7,6 @@ import Pet from '../models/petModel.js';
 const addPet = asyncHandler(async (req, res) => {
   const { image, name, owner, race, age, sex, dateOfBirth, vaccines } =
     req.body;
-  const petExists = await Pet.findOne({ owner });
-
-  if (petExists) {
-    res.status(400);
-    throw new Error('Pet already exists');
-  }
 
   const pet = await Pet.create({
     image,
@@ -57,6 +51,16 @@ const getPetById = asyncHandler(async (req, res) => {
   res.json(pet);
 });
 
+const searchPet = asyncHandler(async (req, res) => {
+  const keyword = req.query.keyword
+    ? {
+        name: req.query.keyword,
+      }
+    : {};
+  const pets = await Pet.find({ ...keyword });
+  res.json(pets);
+});
+
 // @desc Delete pet by id
 // @route DELETE /api/pet
 // @access vet
@@ -99,4 +103,4 @@ const updatePet = asyncHandler(async (req, res) => {
   }
 });
 
-export { addPet, getPetById, deletePet, updatePet };
+export { addPet, getPetById, deletePet, updatePet, searchPet };

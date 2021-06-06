@@ -14,11 +14,7 @@ const LandingPageScreen = ({ history }) => {
   const userLogin = useSelector(state => state.userLogin);
   const { loading, error, userInfo } = userLogin;
 
-  useEffect(() => {
-    if (userInfo) {
-      history.push('/addPet');
-    }
-  }, [history, userInfo]);
+  useEffect(() => {}, [history, userInfo]);
 
   const submitHandler = e => {
     e.preventDefault();

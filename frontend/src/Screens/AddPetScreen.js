@@ -18,6 +18,10 @@ const AddPetScreen = () => {
   const [colour, setColour] = useState('');
   const [vaccines, setVaccines] = useState([]);
   const [owner, setOwner] = useState('');
+  const [vaccine1, setVaccine1] = useState(false);
+  const [vaccine2, setVaccine2] = useState(false);
+  const [vaccine3, setVaccine3] = useState(false);
+  const [vaccine4, setVaccine4] = useState(false);
 
   const pet = useSelector(state => state.addPet);
   const { loading, error, petInfo } = pet;
@@ -30,7 +34,29 @@ const AddPetScreen = () => {
   }, [dispatch]);
 
   const handleChange = event => {
-    setVaccines(...vaccines, event.target.name);
+    if (event.target.name === 'vaccine1') {
+      if (vaccine1 === false) setVaccine1(true);
+      else setVaccine1(false);
+    }
+    if (event.target.name === 'vaccine2') {
+      if (vaccine2 === false) setVaccine2(true);
+      else setVaccine2(false);
+    }
+    if (event.target.name === 'vaccine3') {
+      if (vaccine3 === false) setVaccine3(true);
+      else setVaccine3(false);
+    }
+    if (event.target.name === 'vaccine4') {
+      if (vaccine4 === false) setVaccine4(true);
+      else setVaccine4(false);
+    }
+    var found = vaccines.find(function (el) {
+      return el === event.target.name;
+    });
+    if (found === undefined) {
+      setVaccines([...vaccines, event.target.name]);
+    }
+    console.log(vaccines);
   };
   const handleAdd = e => {
     e.preventDefault();
@@ -145,7 +171,7 @@ const AddPetScreen = () => {
                     label="Vaccine1"
                     name="vaccine1"
                     type="radio"
-                    checked={vaccines['vaccine1']}
+                    checked={vaccine1}
                     onChange={handleChange}
                   />
                   <Form.Check
@@ -153,7 +179,7 @@ const AddPetScreen = () => {
                     label="Vaccine2"
                     name="vaccine2"
                     type="radio"
-                    checked={vaccines['vaccine2']}
+                    checked={vaccine2}
                     onChange={handleChange}
                   />
                   <Form.Check
@@ -161,7 +187,7 @@ const AddPetScreen = () => {
                     label="Vaccine3"
                     name="vaccine3"
                     type="radio"
-                    checked={vaccines['vaccine3']}
+                    checked={vaccine3}
                     onChange={handleChange}
                   />
                   <Form.Check
@@ -169,7 +195,7 @@ const AddPetScreen = () => {
                     label="Vaccine4"
                     name="vaccine4"
                     type="radio"
-                    checked={vaccines['vaccine4']}
+                    checked={vaccine4}
                     onChange={handleChange}
                   />
                 </div>
