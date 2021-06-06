@@ -5,6 +5,7 @@ import connectDB from './config/db.js';
 import userRoutes from './routes/userRoutes.js';
 import petRoutes from './routes/petRoutes.js';
 import vetRoutes from './routes/vetRoutes.js';
+import appointmentRoutes from './routes/appointmentRoutes.js';
 
 dotenv.config();
 
@@ -21,6 +22,7 @@ app.get('/', (req, res) => {
 app.use('/api/users', userRoutes);
 app.use('/api/pet', petRoutes);
 app.use('/api/vet', vetRoutes);
+app.use('/api/appointment', appointmentRoutes);
 
 const PORT = 5000;
 
