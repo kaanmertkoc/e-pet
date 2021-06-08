@@ -217,7 +217,7 @@ const AddPetScreen = () => {
                     onChange={e => setOwner(e.target.value)}
                   >
                     {users.map(user => (
-                      <option>{user._id}</option>
+                      <option>{user.name}</option>
                     ))}
                   </Form.Control>
                 </Form.Group>

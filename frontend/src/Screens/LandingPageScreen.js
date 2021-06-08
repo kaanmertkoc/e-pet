@@ -14,7 +14,11 @@ const LandingPageScreen = ({ history }) => {
   const userLogin = useSelector(state => state.userLogin);
   const { loading, error, userInfo } = userLogin;
 
-  useEffect(() => {}, [history, userInfo]);
+  useEffect(() => {
+    if (userInfo) {
+      history.push('/owner');
+    }
+  }, [history, userInfo]);
 
   const submitHandler = e => {
     e.preventDefault();
