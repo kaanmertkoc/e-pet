@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../Styles/OwnerPetsPage.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form, Button, InputGroup } from 'react-bootstrap';
-import { login } from '../actions/userActions';
-import { Link } from 'react-router-dom';
+import { getPets } from '../actions/petActions';
 import { Route } from 'react-router-dom';
 import cino from '../images/cino.jpeg';
 const OwnerPetsPage = ({ history }) => {
@@ -22,20 +21,6 @@ const OwnerPetsPage = ({ history }) => {
       )}
     />
   );
-  const InfoButton = () => (
-    <Route
-      render={({ history }) => (
-        <button
-          type="button"
-          onClick={() => {
-            history.push('/');
-          }}
-        >
-          <h5>Show Info</h5>
-        </button>
-      )}
-    />
-  );
 
   return (
     <div className="ownerPets-main-div">
@@ -48,7 +33,6 @@ const OwnerPetsPage = ({ history }) => {
             <p className="ownerPets-info-p">Cino</p>
             <p className="ownerPets-info-p">123456789</p>
           </div>
-          <Button onClick={InfoButton} type="submit"></Button>
         </div>
 
         <div className="ownerPets-column">
@@ -57,7 +41,6 @@ const OwnerPetsPage = ({ history }) => {
             <p className="ownerPets-info-p">Cino</p>
             <p className="ownerPets-info-p">123456789</p>
           </div>
-          <Button onClick={InfoButton} type="submit"></Button>
         </div>
       </div>
     </div>

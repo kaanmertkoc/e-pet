@@ -55,7 +55,7 @@ const OwnerMainPageScreen = ({ history }) => {
   };
   const goToAppointments = e => {
     e.preventDefault();
-    history.push('/vetAppointment');
+    history.push('/ownerAppointment');
   };
   useEffect(() => {
     dispatch(getPets());
