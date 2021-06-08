@@ -6,13 +6,14 @@ import Appointment from '../models/appointmentModel.js';
 // @access PUBLIC
 
 const addAppointment = asyncHandler(async (req, res) => {
-  const { pet, appType, vet, date } = req.body;
+  const { pet, appType, vet, date, owner } = req.body;
 
   const appointment = await Appointment.create({
     pet,
     appType,
     vet,
     date,
+    owner,
   });
   if (appointment) {
     res.status(201).json({
@@ -20,6 +21,7 @@ const addAppointment = asyncHandler(async (req, res) => {
       pet: appointment.pet,
       appType: appointment.appType,
       vet: appointment.vet,
+      owner: appointment.owner,
       date: appointment.date,
     });
   } else {
@@ -29,7 +31,7 @@ const addAppointment = asyncHandler(async (req, res) => {
 });
 
 // @desc Get appointment by user Id
-// @route GET /api/vet/:id
+// @route GET /api/appointment/:id
 // @access PUBLIC
 const getAppointmentById = asyncHandler(async (req, res) => {
   const appointment = await Appointment.findById(req.params.id);
@@ -41,4 +43,12 @@ const getAppointmentById = asyncHandler(async (req, res) => {
   }
 });
 
-export { addAppointment, getAppointmentById };
+// @desc Get appointments
+// @route GET /api/appointment
+// @access PUBLIC
+const getAppointments = asyncHandler(async (req, res) => {
+  const appointments = await Appointment.find({});
+  res.json(appointments);
+});
+
+export { addAppointment, getAppointmentById, getAppointments };

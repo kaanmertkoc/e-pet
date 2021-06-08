@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../Styles/OwnerMainPageScreen.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { Form, Button, InputGroup } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
 import { getVets } from '../actions/vetAction';
 import { getPets } from '../actions/petActions';
 import { addAppointment } from '../actions/appointmentAction';
@@ -37,13 +37,25 @@ const OwnerMainPageScreen = ({ history }) => {
         petId = pets[i]._id;
       }
     }
+    const userInfo = localStorage.getItem('userInfo').substring(8, 32);
+
     const appointment = {
       pet: petId,
-      appType: 'appointment1',
+      appType: appointmentType,
       vet: vetId,
+      owner: userInfo,
       date,
     };
     dispatch(addAppointment(appointment));
+    history.push('/ownerAppointment');
+  };
+  const goToPets = e => {
+    e.preventDefault();
+    history.push('/ownerPets');
+  };
+  const goToAppointments = e => {
+    e.preventDefault();
+    history.push('/vetAppointment');
   };
   useEffect(() => {
     dispatch(getPets());
@@ -76,7 +88,12 @@ const OwnerMainPageScreen = ({ history }) => {
           </form>
           <form className="appointment-form-style">
             <Form.Group as={Form.col} controlId="formGridState">
-              <Form.Control as="select" defaultValue="Choose...">
+              <Form.Control
+                as="select"
+                defaultValue="Choose..."
+                value={appointmentType}
+                onChange={e => setAppointmentType(e.target.value)}
+              >
                 <option>Pick Appointment Type</option>
                 <option>Appointment1</option>
                 <option>Appointment2</option>
@@ -113,10 +130,14 @@ const OwnerMainPageScreen = ({ history }) => {
           </Button>
         </div>
       </div>
-      <Button className="owner-page-btn" type="submit">
+      <Button className="owner-page-btn" type="submit" onClick={goToPets}>
         <h5 className="button-text">My Pets</h5>
       </Button>
-      <Button className="owner-page-btn" type="submit">
+      <Button
+        className="owner-page-btn"
+        type="submit"
+        onClick={goToAppointments}
+      >
         <h5 className="button-text">My Appointments</h5>
       </Button>
     </div>

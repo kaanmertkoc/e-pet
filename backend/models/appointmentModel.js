@@ -16,6 +16,11 @@ const appSchema = mongoose.Schema(
       required: true,
       ref: 'vet',
     },
+    owner: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: 'owner',
+    },
     date: {
       type: Date,
       required: true,

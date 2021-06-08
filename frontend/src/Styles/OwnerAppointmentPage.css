@@ -1,81 +1,22 @@
 .ownerAppointment-page-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(60, 159, 231, 0.24);
-  }
-  .ownerAppointment-page-container h1 {
-    font-size: 50px;
-    color: #000000;
-    font-weight: normal;
-    margin: 50px 0px 0px 750px;
-  }
-  .ownerAppointment-page-container h5 {
-    font-size: 24px;
-    font-weight: 400;
-    color: #ffffff;
-    margin: 0px;
-  }
-  .ownerAppointment-form {
-    position: absolute;
-    left: 30%;
-    top: 45%;
-    width:40%;
-    height: 80%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    background: #f3faff;
-    border: 1px solid #f3faff;
-  }
-  .ownerAppointment-page-btn{
-    width: 200px;
-    height: 100px;
-    background: #3C94E7;
-    border: 1px solid #3c9fe7;
-    margin: 20px 0px 0px 10px;
-  }
-
-  .ownerAppointment-container {
-    padding: 50px;
-    display: flex;
-    width: 70%;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  .ownerAppointment-form-style{
-    width: 350px;
-    font-size: 50px;
-    background: #ffffff;
-    border: 1px solid #3c9fe7;
-    margin: 15px;
-  }
-  .ownerAppointment-container h6 {
-    font-size: 36px;
-    color: #000000;
-    font-weight: normal;
-    margin: 50px;
-  }
-  
-  .ownerAppointment-container form {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid #3c9fe7;
-    float: left;
-    width: 100%;
-    background: #ffffff;
-    margin: 20px 0px;
-  }
-  .ownerAppointment-container h5 {
-    font-size: 24px;
-    font-weight: 400;
-    color: #ffffff;
-    margin: 0px;
-  }
-  .ownerAppointment-container button {
-    width: 350px;
-    background: #3c9fe7;
-    border: 1px solid #3c9fe7;
-    margin: 30px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.ownerAppointment-page-btn {
+  width: 200px;
+  height: 100px;
+  background: #3c94e7;
+  border: 1px solid #3c9fe7;
+  margin: 20px 0px 0px 10px;
+}
+.ownerAppointment-card {
+  width: 60%;
+  height: 100px;
+  background-color: #f3faff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
