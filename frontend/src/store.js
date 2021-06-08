@@ -6,8 +6,13 @@ import {
   userRegisterReducer,
   userDetailsReducer,
   getUsersReducer,
+  getUserIdReducer,
 } from './reducers/userReducers';
-import { vetRegisterReducer, getVetsReducer } from './reducers/vetReducers';
+import {
+  vetRegisterReducer,
+  getVetsReducer,
+  vetLoginReducer,
+} from './reducers/vetReducers';
 import {
   addPetReducer,
   getPetReducer,
@@ -24,9 +29,11 @@ const reducer = combineReducers({
   userDetails: userDetailsReducer,
   usersList: getUsersReducer,
   vetRegister: vetRegisterReducer,
+  vetLogin: vetLoginReducer,
   addPet: addPetReducer,
   getPet: getPetReducer,
   getPetDetail: getPetDetailReducer,
+  getUserId: getUserIdReducer,
   vetList: getVetsReducer,
   addAppointment: addAppointmentReducer,
   appointmentList: getAppointmentsReducer,

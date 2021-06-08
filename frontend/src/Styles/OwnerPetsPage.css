@@ -91,7 +91,7 @@
 .ownerPets-img {
   width: 148px;
   height: 242px;
-  margin: auto;
+  margin: 0px 0px 0px 60px;
   align-items: center;
 }
 
@@ -112,6 +112,9 @@
   flex-direction: column;
   align-items: center;
   margin: auto;
+}
+.ownerPets-column h6 {
+  font-size: 15px;
 }
 .ownerPets-info {
   position: relative;

@@ -23,7 +23,7 @@ export const login = (email, password) => async dispatch => {
       },
     };
     const { data } = await axios.post(
-      '/api/vets/login',
+      '/api/vet/login',
       { email, password },
       config
     );
@@ -31,6 +31,7 @@ export const login = (email, password) => async dispatch => {
       type: VET_LOGIN_SUCCESS,
       payload: data,
     });
+    localStorage.setItem('userInfo', JSON.stringify(data));
   } catch (error) {
     dispatch({
       type: VET_LOGIN_FAIL,

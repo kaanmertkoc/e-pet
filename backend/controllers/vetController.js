@@ -33,6 +33,26 @@ const addVet = asyncHandler(async (req, res) => {
   }
 });
 
+// @desc    Auth user & get token
+// @route   POST /api/users/login
+// @access  PUBLIC
+const loginVet = asyncHandler(async (req, res) => {
+  const { email, password } = req.body;
+
+  const vet = await Vet.findOne({ email });
+
+  if (vet && (await vet.matchPassword(password))) {
+    res.json({
+      _id: vet._id,
+      name: vet.name,
+      email: vet.email,
+    });
+  } else {
+    res.status(401);
+    throw new Error('Invalid email or password');
+  }
+});
+
 // @desc Get vets
 // @route GET /api/vet
 // @access PUBLIC
@@ -91,4 +111,4 @@ const updateVet = asyncHandler(async (req, res) => {
   }
 });
 
-export { addVet, getVetById, deleteVet, updateVet, getVets };
+export { addVet, getVetById, deleteVet, updateVet, getVets, loginVet };

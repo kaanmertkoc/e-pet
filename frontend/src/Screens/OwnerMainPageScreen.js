@@ -25,16 +25,16 @@ const OwnerMainPageScreen = ({ history }) => {
   const submitHandler = e => {
     e.preventDefault();
     var vetId = '';
-    var petId = '';
+    var petId = '60bf6fd23692f551f4f71103';
 
     for (var i = 0; i < vets.length; i++) {
       if (vet === vets[i].name) {
         vetId = vets[i]._id;
       }
     }
-    for (var i = 0; i < pets.length; i++) {
-      if (pet === pets[i].name) {
-        petId = pets[i]._id;
+    for (var j = 0; j < pets.length; j++) {
+      if (pet === pets[j].name) {
+        petId = pets[j]._id;
       }
     }
     const userInfo = localStorage.getItem('userInfo').substring(8, 32);
@@ -52,6 +52,17 @@ const OwnerMainPageScreen = ({ history }) => {
   const goToPets = e => {
     e.preventDefault();
     history.push('/ownerPets');
+  };
+  const getUsersPet = () => {
+    const userInfo = localStorage.getItem('userInfo').substring(8, 32);
+
+    var usersPet = [];
+    for (var i = 0; i < pets.length; i++) {
+      if (userInfo === pets[i].owner) {
+        usersPet.push(pets[i]);
+      }
+    }
+    return usersPet;
   };
   const goToAppointments = e => {
     e.preventDefault();
@@ -79,7 +90,7 @@ const OwnerMainPageScreen = ({ history }) => {
                   value={pet}
                   onChange={e => setPet(e.target.value)}
                 >
-                  {pets.map(pet => (
+                  {getUsersPet().map(pet => (
                     <option>{pet.name}</option>
                   ))}
                 </Form.Control>

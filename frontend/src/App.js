@@ -14,6 +14,7 @@ import VetAppointmentPage from './Screens/VetAppointmentsPage';
 import AddPetScreen from './Screens/AddPetScreen';
 import PetInfoScreen from './Screens/PetInfoScreen';
 import SearchListScreen from './Screens/SearchListScreen';
+import VetLoginScreen from './Screens/VetLoginScreen';
 
 function App() {
   return (
@@ -37,6 +38,8 @@ function App() {
         <Route path="/vetAppointment" exact component={VetAppointmentPage} />
         <Route path="/addPet" exact component={AddPetScreen} />
         <Route path="/vet-main-page" exact component={VetMainPageScreen} />
+        <Route path="/petInfo/:id" exact component={PetInfoScreen} />
+        <Route path="/vetLogin" exact component={VetLoginScreen} />
       </Switch>
     </Router>
   );

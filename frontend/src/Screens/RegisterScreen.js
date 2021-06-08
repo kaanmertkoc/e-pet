@@ -5,7 +5,7 @@ import { Form, Button, Alert } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../Styles/RegisterPage.css';
 
-const RegisterScreen = () => {
+const RegisterScreen = ({ history }) => {
   const dispatch = useDispatch();
 
   const [name, setName] = useState('');
@@ -22,6 +22,7 @@ const RegisterScreen = () => {
   useEffect(() => {
     if (userInfo) {
       setShow(true);
+      history.push('/owner');
     }
   }, [userInfo]);
 

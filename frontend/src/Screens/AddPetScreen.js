@@ -60,11 +60,17 @@ const AddPetScreen = () => {
   };
   const handleAdd = e => {
     e.preventDefault();
-    console.log(date);
+    var ownerId = '';
+    for (var i = 0; i < users.length; i++) {
+      if (owner === users[i].name) {
+        console.log('!');
+        ownerId = users[i]._id;
+      }
+    }
     const petToBeAdded = {
       image: '/cino.png',
       name,
-      owner,
+      owner: ownerId,
       race,
       age: 1,
       sex,

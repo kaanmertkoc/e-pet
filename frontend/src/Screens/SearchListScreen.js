@@ -16,7 +16,7 @@ const SearchListScreen = ({ match }) => {
   const usersList = useSelector(state => state.usersList);
   const { loading: loadingUsers, error: errorUser, users } = usersList;
 
-  const filter = match.params.keyword.toLowerCase();
+  const filter = match.params.keyword;
   useEffect(() => {
     dispatch(getUsers());
     dispatch(getPets(filter));

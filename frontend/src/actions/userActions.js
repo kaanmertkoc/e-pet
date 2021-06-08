@@ -13,6 +13,9 @@ import {
   GET_USERS_REQUEST,
   GET_USERS_SUCCESS,
   GET_USERS_FAIL,
+  GET_USER_BY_ID_REQUEST,
+  GET_USER_BY_ID_SUCCESS,
+  GET_USER_BY_ID_FAIL,
 } from '../constants/userConstants';
 
 export const login = (email, password) => async dispatch => {
@@ -99,6 +102,21 @@ export const getUsers = () => async (dispatch, getState) => {
     dispatch({
       type: GET_USERS_FAIL,
       payload: message,
+    });
+  }
+};
+export const getUserId = id => async dispatch => {
+  try {
+    dispatch({ type: GET_USER_BY_ID_REQUEST });
+    const { data } = await axios.get(`/api/users/${id}`);
+    dispatch({ type: GET_USER_BY_ID_SUCCESS, payload: data });
+  } catch (error) {
+    dispatch({
+      type: GET_USER_BY_ID_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
     });
   }
 };

@@ -12,6 +12,9 @@ import {
   GET_USERS_REQUEST,
   GET_USERS_SUCCESS,
   GET_USERS_FAIL,
+  GET_USER_BY_ID_REQUEST,
+  GET_USER_BY_ID_SUCCESS,
+  GET_USER_BY_ID_FAIL,
 } from '../constants/userConstants';
 
 export const userLoginReducer = (state = { pets: [] }, action) => {
@@ -102,6 +105,26 @@ export const getUsersReducer = (state = { users: [] }, action) => {
         loading: false,
         error: action.payload,
       };
+    default:
+      return state;
+  }
+};
+
+export const getUserIdReducer = (state = { user: { pet: [] } }, action) => {
+  // eslint-disable-next-line default-case
+  switch (action.type) {
+    case GET_USER_BY_ID_REQUEST:
+      return {
+        loading: true,
+        ...state,
+      };
+    case GET_USER_BY_ID_SUCCESS:
+      return {
+        loading: false,
+        user: action.payload,
+      };
+    case GET_USER_BY_ID_FAIL:
+      return { loading: false, error: action.payload };
     default:
       return state;
   }
