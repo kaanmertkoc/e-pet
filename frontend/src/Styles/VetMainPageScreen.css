@@ -67,16 +67,13 @@
   background: #3c9fe7;
   border: 1px solid #fff;
   margin: 11px;
-}
-
-.edit-btn h6 {
   font-size: 24px;
   color: #fff;
-  margin: 10px 0px;
   font-weight: bold;
 }
 
 h1 {
   font-size: 36px;
   font-weight: bold;
+  color: #1a5885;
 }
