@@ -86,11 +86,7 @@ const AddPetScreen = () => {
         <div className="image-id-container">
           <img src="/image1.png" width="240px" height="350px" alt="pet" />
           <h6>85449481561</h6>
-          <button className="customButton">
-            <h5 style={{ fontSize: '24px', color: '#ffffff', margin: '0px' }}>
-              Change Photo
-            </h5>{' '}
-          </button>
+
           <button className="customButton">
             <h5 style={{ fontSize: '24px', color: '#ffffff', margin: '0px' }}>
               Return to main page

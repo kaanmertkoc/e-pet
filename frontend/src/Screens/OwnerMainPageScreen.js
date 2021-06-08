@@ -64,6 +64,10 @@ const OwnerMainPageScreen = ({ history }) => {
     }
     return usersPet;
   };
+  const goToAddPet = e => {
+    e.preventDefault();
+    history.push('/addPet');
+  };
   const goToAppointments = e => {
     e.preventDefault();
     history.push('/ownerAppointment');
@@ -132,7 +136,11 @@ const OwnerMainPageScreen = ({ history }) => {
             )}
           </form>
           <form className="appointment-form-style">
-            <Form.Group as={Form.col} controlId="formGridState">
+            <Form.Group
+              as={Form.col}
+              controlId="formGridState"
+              onChange={e => setDate(e.target.value)}
+            >
               <Form.Control type="date" />
             </Form.Group>
           </form>
@@ -150,6 +158,9 @@ const OwnerMainPageScreen = ({ history }) => {
         onClick={goToAppointments}
       >
         <h5 className="button-text">My Appointments</h5>
+      </Button>
+      <Button className="owner-page-btn" type="submit" onClick={goToAddPet}>
+        <h5 className="button-text">Add Pet</h5>
       </Button>
     </div>
   );
